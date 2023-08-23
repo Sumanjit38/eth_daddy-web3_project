@@ -4,11 +4,10 @@
 // You can also run a script with `npx hardhat run <script>`. If you do that, Hardhat
 // will compile your contracts, add the Hardhat Runtime Environment's members to the
 // global scope, and execute the script.
-//const { ethers } = require("ethers");
 const hre = require("hardhat");
 
 const tokens = (n) => {
-  return hre.ethers.utils.parseUnits(n.toString(), 'ether')
+  return ethers.utils.parseUnits(n.toString(), 'ether')
 }
 
 async function main() {
